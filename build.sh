@@ -107,11 +107,12 @@ if [ ! -d ipopt ] ; then
             echo ""
         fi
         echo -e "${colored}Unpacking IPOPT${normal}" && echo 
-        unzip ${ARCHIVES}/ipopt.zip
+        unzip -q ${ARCHIVES}/ipopt.zip
         mv Ipopt-releases-${ipopt_version} ipopt
         
         # Get all of the dependencies (we build later)
         echo -e "${colored}Getting dependencies${normal}" && echo 
+        ls $BASE
         cd $BASE/ThirdParty-Blas
         ./get.Blas
         cd $BASE/ThirdParty-Lapack
