@@ -18,6 +18,13 @@ jobs:
         if: false
         run: |
           git clone https://github.com/jeti/android_ipopt
+      - name: Clone Their
+        run: |
+          git clone https://github.com/coin-or-tools/ThirdParty-Mumps
+          git clone https://github.com/coin-or-tools/ThirdParty-Blas
+          git clone https://github.com/coin-or-tools/ThirdParty-Lapack
+          git clone https://github.com/coin-or-tools/ThirdParty-Metis
       - uses: actions/checkout@v3
       - name: build
+        if: false
         run: chmod +x build.sh && ./build.sh
