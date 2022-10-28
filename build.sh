@@ -95,7 +95,7 @@ if [ ! -d ipopt ] ; then
         # See if we already have the ipopt zip already downloaded
         if [ ! -f ${ARCHIVES}/ipopt.zip ] ; then
             echo -e "${colored}Downloading IPOPT${normal}" && echo 
-            curl -o ${ARCHIVES}/ipopt.zip https://www.coin-or.org/download/source/Ipopt/Ipopt-${ipopt_version}.zip
+            curl -s -o ${ARCHIVES}/ipopt.zip https://www.coin-or.org/download/source/Ipopt/Ipopt-${ipopt_version}.zip
         fi
         
         # Now unzip the archive and rename the unzipped folder
@@ -108,7 +108,7 @@ if [ ! -d ipopt ] ; then
         fi
         echo -e "${colored}Unpacking IPOPT${normal}" && echo 
         unzip ${ARCHIVES}/ipopt.zip
-        mv Ipopt-${ipopt_version} ipopt
+        mv Ipopt-releases-${ipopt_version} ipopt
         
         # Get all of the dependencies (we build later)
         echo -e "${colored}Getting dependencies${normal}" && echo 
