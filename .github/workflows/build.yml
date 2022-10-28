@@ -1,0 +1,23 @@
+name: Build Ipopt
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    # if: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Information
+        run: env
+      - name: Clone build scripts
+        if: false
+        run: |
+          git clone https://github.com/jeti/android_ipopt
+      - uses: actions/checkout@v3
+      - name: build
+        run: chmod +x build.sh && ./build.sh
