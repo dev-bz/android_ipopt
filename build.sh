@@ -71,7 +71,7 @@ for (( i=0; i<${N_SYSTEMS}; i++ )) ; do
         if [ ! -f ${ARCHIVES}/${ZIPS[$i]}-4.9.7z ] ; then
 
             echo -e "${colored}Downloading the standalone toolchain ${SYSTEMS[$i]}${normal}" && echo
-            wget https://github.com/jeti/android_fortran/releases/download/toolchains/${ZIPS[$i]}-4.9.7z -P ${ARCHIVES}
+            wget -q https://github.com/jeti/android_fortran/releases/download/toolchains/${ZIPS[$i]}-4.9.7z -P ${ARCHIVES}
             echo -e "${colored}Downloaded the standalone toolchain ${SYSTEMS[$i]}${normal}" && echo
         fi
         
