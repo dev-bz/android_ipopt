@@ -26,5 +26,5 @@ jobs:
           git clone https://github.com/coin-or-tools/ThirdParty-Metis
       - uses: actions/checkout@v3
       - name: build
-        if: false
+        # if: false
         run: chmod +x build.sh && ./build.sh
