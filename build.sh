@@ -2,7 +2,7 @@
 set -e
 
 # Specify which version of IPOPT you want 
-ipopt_version="3.12.9"
+ipopt_version="3.14.4"
 
 # Specify NDK release and API that you want to use. 
 NDK_RELEASE="r13b"
