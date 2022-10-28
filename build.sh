@@ -112,13 +112,13 @@ if [ ! -d ipopt ] ; then
         
         # Get all of the dependencies (we build later)
         echo -e "${colored}Getting dependencies${normal}" && echo 
-        cd $BASE/ipopt/ThirdParty/Blas
+        cd $BASE/ThirdParty-Blas
         ./get.Blas
-        cd $BASE/ipopt/ThirdParty/Lapack
+        cd $BASE/ThirdParty-Lapack
         ./get.Lapack
-        cd $BASE/ipopt/ThirdParty/Mumps
+        cd $BASE/ThirdParty-Mumps
         ./get.Mumps
-        cd $BASE/ipopt/ThirdParty/Metis
+        cd $BASE/ThirdParty-Metis
         ./get.Metis
         cd $BASE
         
