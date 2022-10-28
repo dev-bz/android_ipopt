@@ -12,6 +12,7 @@ jobs:
     # if: false
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Information
         run: env
       - name: Clone build scripts
@@ -26,7 +27,6 @@ jobs:
           git clone https://github.com/coin-or-tools/ThirdParty-Metis
       - name: Print paths
         run: pwd && ls
-      - uses: actions/checkout@v3
       - name: build
         # if: false
         run: chmod +x build.sh && ./build.sh
