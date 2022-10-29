@@ -20,6 +20,7 @@ jobs:
         run: |
           git clone https://github.com/jeti/android_ipopt
       - name: Clone ThirdParty
+        if: false
         run: |
           git clone https://github.com/coin-or-tools/ThirdParty-Mumps
           git clone https://github.com/coin-or-tools/ThirdParty-Blas
