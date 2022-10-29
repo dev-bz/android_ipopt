@@ -1,0 +1,12 @@
+[submodule "ThirdParty-Mumps"]
+  path = ThirdParty/Mumps
+  url = https://github.com/coin-or-tools/ThirdParty-Mumps
+[submodule "ThirdParty-Blas"]
+  path = ThirdParty/Blas
+  url = https://github.com/coin-or-tools/ThirdParty-Blas
+[submodule "ThirdParty-Lapack"]
+  path = ThirdParty/Lapack
+  url = https://github.com/coin-or-tools/ThirdParty-Lapack
+[submodule "ThirdParty-Metis"]
+  path = ThirdParty/Metis
+  url = https://github.com/coin-or-tools/ThirdParty-Metis
