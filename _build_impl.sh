@@ -21,7 +21,7 @@ if [ ]; then
     # Build BLAS
     if [ ! -f ${BUILD_DIR}/lib/libcoinblas.a ] ; then
         echo -e "${colored}Building BLAS for ${SYSTEMS[$i]}${normal}" && echo 
-        cd $BASE/ThirdParty-Blas
+        cd $BASE/ThirdParty/Blas
         mkdir -p build/${SYSTEMS[$i]}
         cd build/${SYSTEMS[$i]}
         ../../configure --prefix=$BUILD_DIR --host="${HEADERS[$i]}" --enable-static --with-pic > _configure.blas.log
@@ -32,7 +32,7 @@ if [ ]; then
     # Build Lapack
     if [ ! -f ${BUILD_DIR}/lib/libcoinlapack.a ] ; then
         echo -e "${colored}Building Lapack for ${SYSTEMS[$i]}${normal}" && echo 
-        cd $BASE/ThirdParty-Lapack
+        cd $BASE/ThirdParty/Lapack
         mkdir -p build/${SYSTEMS[$i]}
         cd build/${SYSTEMS[$i]}
         ../../configure --prefix=$BUILD_DIR --host="${HEADERS[$i]}" --enable-static --with-pic \
