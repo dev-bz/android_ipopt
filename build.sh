@@ -109,6 +109,7 @@ if [ ! -d ipopt ] ; then
         echo -e "${colored}Unpacking IPOPT${normal}" && echo 
         unzip -q ${ARCHIVES}/ipopt.zip
         mv Ipopt-releases-${ipopt_version} ipopt
+        ln -l ${BASE}/ThirdParty ipopt/ThirdParty
         
         # Get all of the dependencies (we build later)
         echo -e "${colored}Getting dependencies${normal}" && echo 
